@@ -5,7 +5,9 @@ chrome.runtime.onMessage.addListener((message) => {
     chrome.storage.local.set({ tweetData: message.data });
 
     // Prepare the API URL for your Spring Boot backend
-    const apiUrl = 'http://localhost:8080/tweet'; // Replace with your Spring Boot API URL
+    const apiUrl = 'http://localhost:8080/api/content'; // Replace with your Spring Boot API URL
+
+    console.log("teri mummy");
 
     // Send POST request to Spring Boot backend
     fetch(apiUrl, {
